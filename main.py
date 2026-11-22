@@ -7,15 +7,23 @@ Fixed strings only: no network, no randomness, no clock.
 
 import os
 
-TEXT = """The scores can wait until morning.
+OPENING = "The scores can wait until morning."
 
-( ( ( here ) ) )
+PRESENCE = "( ( ( here ) ) )"
 
-In the next room a small lamp is still on, low and amber, in no hurry. The dark around it is not empty. Something kind is keeping it company \u2014 and you, too.
+SCENE = (
+    "In the next room a small lamp is still on, low and amber, in no hurry. "
+    "The dark around it is not empty. Something kind is keeping it company "
+    "\u2014 and you, too."
+)
 
-. \u00b7 \u2022 \u2022 \u2022 \u00b7 .
+BREATH = ". \u00b7 \u2022 \u2022 \u2022 \u00b7 ."
 
-You don't have to grade this one."""
+CLOSING = "You don't have to grade this one."
+
+PARAGRAPHS = (OPENING, PRESENCE, SCENE, BREATH, CLOSING)
+
+TEXT = "\n\n".join(PARAGRAPHS)
 
 OUT = "/output/entry.txt"
 
